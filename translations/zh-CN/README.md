@@ -1,8 +1,7 @@
 ![Material design library logo](images/logo.png)
 
 <!-- github-global:langs:start -->
-## 翻译
-[简体中文](./translations/zh-CN/README.md) | [繁體中文](./translations/zh-TW/README.md) | [日本語](./translations/ja/README.md)
+[简体中文](./README.md) | [繁體中文](../zh-TW/README.md) | [日本語](../ja/README.md)
 <!-- github-global:langs:end -->
 
 
@@ -41,7 +40,7 @@
 
 如果你想使用这个库，只需下载 MaterialDesign 项目，将其导入你的工作区，并在你的 Android 项目设置中把该项目添加为库。
 
-如果你更喜欢这种方式，也可以使用 gradle 依赖，只需在 build.gradle 文件中添加以下几行：
+如果你愿意，也可以使用 gradle 依赖，只需在 build.gradle 文件中添加以下几行：
 
 ```xml
 repositories {
