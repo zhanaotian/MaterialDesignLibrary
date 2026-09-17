@@ -1,7 +1,6 @@
 ![Material design library logo](images/logo.png)
 
 <!-- github-global:langs:start -->
-## Translations
 [简体中文](./translations/zh-CN/README.md) | [繁體中文](./translations/zh-TW/README.md) | [日本語](./translations/ja/README.md)
 <!-- github-global:langs:end -->
 

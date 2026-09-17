@@ -1,5 +1,11 @@
 ![Material design library logo](images/logo.png)
 
+<!-- github-global:langs:start -->
+## 語言翻譯
+[简体中文](./translations/zh-CN/README.md) | [繁體中文](./translations/zh-TW/README.md) | [日本語](./translations/ja/README.md)
+<!-- github-global:langs:end -->
+
+
 # Material Design Android Library
 
 <a href="https://play.google.com/store/apps/details?id=com.gc.demomaterialdesign">
@@ -9,13 +15,13 @@
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Material%20Design%20Android%20Library-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1156)
 
-* [如何使用](#howtouse)
+* [使用方法](#howtouse)
 * [元件](#components)
     * [按鈕](#buttons)
-        * [Flat Button](#flat-button)
-        * [Rectangle Button](#rectangle-button)
-        * [Float Button](#float-button)
-        * [Float 小按鈕](#float-small-button)
+        * [平面按鈕（Flat Button）](#flat-button)
+        * [矩形按鈕（Rectangle Button）](#rectangle-button)
+        * [浮動按鈕（Float Button）](#float-button)
+        * [小型浮動按鈕（Float small button）](#float-small-button)
     * [開關](#switches)
         * [CheckBox](#checkbox)
         * [Switch](#switch)
@@ -24,18 +30,18 @@
         * [不確定進度條](#progress-bar-indeterminate)
         * [不確定／確定進度條](#progress-bar-indeterminate-determinate)
         * [確定進度條](#progress-bar-determinate)
-        * [滑桿](#slider)
+        * [滑桿（Slider）](#slider)
         * [帶數字指示器的滑桿](#slider-with-number-indicator)
 * [小工具](#widgets)
     * [SnackBar](#snackbar)
     * [Dialog](#dialog)
     * [顏色選擇器](#color-selector)
 
-## 如何使用
+## 使用方法
 
 如果你想使用這個函式庫，只需要下載 MaterialDesign 專案，將它匯入你的工作區，並在你的 Android 專案設定中將該專案加入為函式庫。
 
-如果你偏好的話，也可以使用 gradle 相依性，只要在你的 build.gradle 檔案中加入以下幾行：
+如果你偏好的話，也可以使用 gradle 相依性，只需在你的 build.gradle 檔案中加入以下幾行：
 
 ```xml
 repositories {
@@ -47,7 +53,7 @@ dependencies {
 }
 ```
 
-有些元件具有自訂屬性，如果你想使用它們，必須在你的 xml 檔案的第一個元件中加入這一行：
+有些元件具有自訂屬性，如果你想使用它們，必須在你的 xml 檔案中的第一個元件加入這一行：
 
 ```xml
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -74,7 +80,7 @@ dependencies {
 
 ####按鈕
 
-######Flat Button
+######平面按鈕（Flat Button）
 
 ![flat button](images/flat_button.png)
 ```xml
@@ -86,7 +92,7 @@ dependencies {
                 android:text="Button" />
 ```
 
-######Rectangle Button
+######矩形按鈕（Rectangle Button）
 
 ![rectangle button](images/rectangle_button.png)
 ```xml
@@ -98,7 +104,7 @@ dependencies {
                 android:text="Button" />
 ```
 
-######Float Button
+######浮動按鈕（Float Button）
 
 ![float button](images/float_button.png)
 
@@ -126,7 +132,7 @@ dependencies {
 </RelativeLayout>
 ```
 
-######Float 小按鈕
+######小型浮動按鈕（Float small button）
 
 ![float small button](images/float_small_button.png)
 
@@ -221,7 +227,7 @@ dependencies {
 
 >你可以使用 `materialdesign:max="50"` 和 `materialdesign:min="25"` 屬性自訂進度的最大值與最小值。
 
-######滑桿
+######滑桿（Slider）
 ![Slider](images/slider.png)
 
 

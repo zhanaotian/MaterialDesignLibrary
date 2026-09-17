@@ -1,5 +1,11 @@
 ![Material design library logo](images/logo.png)
 
+<!-- github-global:langs:start -->
+## 翻译
+[简体中文](./translations/zh-CN/README.md) | [繁體中文](./translations/zh-TW/README.md) | [日本語](./translations/ja/README.md)
+<!-- github-global:langs:end -->
+
+
 # Material Design Android Library
 
 <a href="https://play.google.com/store/apps/details?id=com.gc.demomaterialdesign">
@@ -102,7 +108,7 @@ dependencies {
 
 ![float button](images/float_button.png)
 
->建议将此组件放置在屏幕右下角。要使用此组件，请在你的 xml 文件中编写以下代码。
+>建议将此组件放置在屏幕右下角。要使用此组件，请在你的 xml 文件中写入以下代码。
 >如果你不想让此组件以动画方式启动，请将 animate 属性设置为 false。
 >将你的图标放在 icon 属性中，即可为该组件设置 drawable 图标。
 
