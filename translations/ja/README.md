@@ -1,5 +1,11 @@
 ![Material design library logo](images/logo.png)
 
+<!-- github-global:langs:start -->
+## 翻訳
+[简体中文](./translations/zh-CN/README.md) | [繁體中文](./translations/zh-TW/README.md) | [日本語](./translations/ja/README.md)
+<!-- github-global:langs:end -->
+
+
 # Material Design Android Library
 
 <a href="https://play.google.com/store/apps/details?id=com.gc.demomaterialdesign">
@@ -15,15 +21,15 @@
         * [フラットボタン](#flat-button)
         * [レクタングルボタン](#rectangle-button)
         * [フロートボタン](#float-button)
-        * [スモールフロートボタン](#float-small-button)
+        * [小サイズのフロートボタン](#float-small-button)
     * [スイッチ](#switches)
         * [CheckBox](#checkbox)
         * [Switch](#switch)
     * [プログレスインジケーター](#progress-indicators)
-        * [プログレスバー（サーキュラー・不確定）](#progress-bar-circula-rindeterminate)
-        * [プログレスバー（不確定）](#progress-bar-indeterminate)
-        * [プログレスバー（不確定・確定）](#progress-bar-indeterminate-determinate)
-        * [プログレスバー（確定）](#progress-bar-determinate)
+        * [円形不確定プログレスバー](#progress-bar-circula-rindeterminate)
+        * [不確定プログレスバー](#progress-bar-indeterminate)
+        * [不確定・確定プログレスバー](#progress-bar-indeterminate-determinate)
+        * [確定プログレスバー](#progress-bar-determinate)
         * [スライダー](#slider)
         * [数値インジケーター付きスライダー](#slider-with-number-indicator)
 * [ウィジェット](#widgets)
@@ -103,7 +109,7 @@ dependencies {
 ![float button](images/float_button.png)
 
 >このコンポーネントは画面の右下に配置することをお勧めします。このコンポーネントを使用するには、xml ファイルに次のコードを記述してください。
->このコンポーネントをアニメーションなしで開始したくない場合は、animate 属性を false に設定してください。
+>このコンポーネントをアニメーションなしで開始したい場合は、animate 属性を false に設定してください。
 >このコンポーネントの drawable アイコンを設定するには、icon 属性にアイコンを指定してください。
 
 ```xml
@@ -126,7 +132,7 @@ dependencies {
 </RelativeLayout>
 ```
 
-######スモールフロートボタン
+######小サイズのフロートボタン
 
 ![float small button](images/float_small_button.png)
 
@@ -167,7 +173,7 @@ dependencies {
 
 ####プログレスインジケーター
 
-######プログレスバー（サーキュラー・不確定）
+######円形不確定プログレスバー
 ![progress bar circular indeterminate](images/progress_bar_circular_indeterminate.png)
 
 ```xml
@@ -178,7 +184,7 @@ dependencies {
                 android:background="#1E88E5" />
 ```
 
-######プログレスバー（不確定）
+######不確定プログレスバー
 ![progress bar indeterminate](images/progress_bar_indeterminate.png)
 
 ```xml
@@ -189,7 +195,7 @@ dependencies {
                 android:background="#1E88E5" />
 ```
 
-######プログレスバー（不確定・確定）
+######不確定・確定プログレスバー
 ![Progress bar indeterminate determinate](images/progress_bar_indeterminate_determinate.png)
 
 
@@ -207,7 +213,7 @@ dependencies {
 >progressBarIndeterminateDeterminate.setProgress(progress);
 >```
 
-######プログレスバー（確定）
+######確定プログレスバー
 ![Progress bar determinate](images/progress_bar_determinate.png)
 
 
@@ -274,11 +280,11 @@ Dialog dialog = new Dialog(Context context,String title, String message);
 dialog.show();
 ```
 
->イベントリスナーで accept ボタンと cancel ボタンを設定したり、テキストを変更したりできます。
+>イベントリスナーで accept ボタンと cancel ボタンを設定したり、そのテキストを変更したりできます。
 >```java
-> // accept ボタンのクリックリスナーを設定
+> // accept のクリックリスナーを設定
 >dialog.setOnAcceptButtonClickListener(View.OnClickListener onAcceptButtonClickListener);
-> // cancel ボタンのクリックリスナーを設定
+> // cancel のクリックリスナーを設定
 >dialog.setOnCancelButtonClickListener(View.OnClickListener onCancelButtonClickListener);
 > // accept ボタンへのアクセス
 >ButtonFlat acceptButton = dialog.getButtonAccept();
