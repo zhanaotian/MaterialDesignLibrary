@@ -1,8 +1,7 @@
 ![Material design library logo](images/logo.png)
 
 <!-- github-global:langs:start -->
-## 語言翻譯
-[简体中文](./translations/zh-CN/README.md) | [繁體中文](./translations/zh-TW/README.md) | [日本語](./translations/ja/README.md)
+[简体中文](../zh-CN/README.md) | [繁體中文](./README.md) | [日本語](../ja/README.md)
 <!-- github-global:langs:end -->
 
 
@@ -15,10 +14,10 @@
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Material%20Design%20Android%20Library-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1156)
 
-* [使用方法](#howtouse)
+* [如何使用](#howtouse)
 * [元件](#components)
     * [按鈕](#buttons)
-        * [平面按鈕（Flat Button）](#flat-button)
+        * [扁平按鈕（Flat Button）](#flat-button)
         * [矩形按鈕（Rectangle Button）](#rectangle-button)
         * [浮動按鈕（Float Button）](#float-button)
         * [小型浮動按鈕（Float small button）](#float-small-button)
@@ -37,7 +36,7 @@
     * [Dialog](#dialog)
     * [顏色選擇器](#color-selector)
 
-## 使用方法
+## 如何使用
 
 如果你想使用這個函式庫，只需要下載 MaterialDesign 專案，將它匯入你的工作區，並在你的 Android 專案設定中將該專案加入為函式庫。
 
@@ -53,7 +52,7 @@ dependencies {
 }
 ```
 
-有些元件具有自訂屬性，如果你想使用它們，必須在你的 xml 檔案中的第一個元件加入這一行：
+有些元件具有自訂屬性，如果你想使用它們，必須在你的 xml 檔案的第一個元件中加入這一行：
 
 ```xml
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -80,7 +79,7 @@ dependencies {
 
 ####按鈕
 
-######平面按鈕（Flat Button）
+######扁平按鈕（Flat Button）
 
 ![flat button](images/flat_button.png)
 ```xml
@@ -108,9 +107,9 @@ dependencies {
 
 ![float button](images/float_button.png)
 
->建議將這個元件放在螢幕右下角。要使用這個元件，請在你的 xml 檔案中撰寫以下程式碼。
+>建議將這個元件放在螢幕的右下角。要使用這個元件，請在你的 xml 檔案中撰寫以下程式碼。
 >如果你不想讓這個元件以動畫方式啟動，請將 animate 屬性設為 false。
->將你的圖示放在 icon 屬性中，即可設定這個元件的 drawable 圖示。
+>將你的圖示放在 icon 屬性中，即可為這個元件設定 drawable 圖示。
 
 ```xml
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"

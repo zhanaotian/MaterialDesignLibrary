@@ -1,8 +1,7 @@
 ![Material design library logo](images/logo.png)
 
 <!-- github-global:langs:start -->
-## 翻訳
-[简体中文](./translations/zh-CN/README.md) | [繁體中文](./translations/zh-TW/README.md) | [日本語](./translations/ja/README.md)
+[简体中文](../zh-CN/README.md) | [繁體中文](../zh-TW/README.md) | [日本語](./README.md)
 <!-- github-global:langs:end -->
 
 
@@ -21,15 +20,15 @@
         * [フラットボタン](#flat-button)
         * [レクタングルボタン](#rectangle-button)
         * [フロートボタン](#float-button)
-        * [小サイズのフロートボタン](#float-small-button)
+        * [フロートスモールボタン](#float-small-button)
     * [スイッチ](#switches)
         * [CheckBox](#checkbox)
         * [Switch](#switch)
     * [プログレスインジケーター](#progress-indicators)
-        * [円形不確定プログレスバー](#progress-bar-circula-rindeterminate)
-        * [不確定プログレスバー](#progress-bar-indeterminate)
-        * [不確定・確定プログレスバー](#progress-bar-indeterminate-determinate)
-        * [確定プログレスバー](#progress-bar-determinate)
+        * [プログレスバー（円形・不確定）](#progress-bar-circula-rindeterminate)
+        * [プログレスバー（不確定）](#progress-bar-indeterminate)
+        * [プログレスバー（不確定・確定）](#progress-bar-indeterminate-determinate)
+        * [プログレスバー（確定）](#progress-bar-determinate)
         * [スライダー](#slider)
         * [数値インジケーター付きスライダー](#slider-with-number-indicator)
 * [ウィジェット](#widgets)
@@ -64,7 +63,7 @@ dependencies {
 </RelativeLayout>
 ```
 
->ScrollView を使用する場合、カスタムコンポーネントでの問題を避けるために、このライブラリで提供されている CustomScrollView を使用することをお勧めします。
+>ScrollView を使用する予定がある場合は、カスタムコンポーネントでの問題を避けるため、このライブラリに含まれている CustomScrollView を使用することをお勧めします。
 >このコンポーネントを使用するには:
 >```xml
 ><com.gc.materialdesign.views.ScrollView 
@@ -109,7 +108,7 @@ dependencies {
 ![float button](images/float_button.png)
 
 >このコンポーネントは画面の右下に配置することをお勧めします。このコンポーネントを使用するには、xml ファイルに次のコードを記述してください。
->このコンポーネントをアニメーションなしで開始したい場合は、animate 属性を false に設定してください。
+>アニメーション付きでこのコンポーネントを開始したくない場合は、animate 属性を false に設定してください。
 >このコンポーネントの drawable アイコンを設定するには、icon 属性にアイコンを指定してください。
 
 ```xml
@@ -132,7 +131,7 @@ dependencies {
 </RelativeLayout>
 ```
 
-######小サイズのフロートボタン
+######フロートスモールボタン
 
 ![float small button](images/float_small_button.png)
 
@@ -173,7 +172,7 @@ dependencies {
 
 ####プログレスインジケーター
 
-######円形不確定プログレスバー
+######プログレスバー（円形・不確定）
 ![progress bar circular indeterminate](images/progress_bar_circular_indeterminate.png)
 
 ```xml
@@ -184,7 +183,7 @@ dependencies {
                 android:background="#1E88E5" />
 ```
 
-######不確定プログレスバー
+######プログレスバー（不確定）
 ![progress bar indeterminate](images/progress_bar_indeterminate.png)
 
 ```xml
@@ -195,7 +194,7 @@ dependencies {
                 android:background="#1E88E5" />
 ```
 
-######不確定・確定プログレスバー
+######プログレスバー（不確定・確定）
 ![Progress bar indeterminate determinate](images/progress_bar_indeterminate_determinate.png)
 
 
@@ -213,7 +212,7 @@ dependencies {
 >progressBarIndeterminateDeterminate.setProgress(progress);
 >```
 
-######確定プログレスバー
+######プログレスバー（確定）
 ![Progress bar determinate](images/progress_bar_determinate.png)
 
 
@@ -282,9 +281,9 @@ dialog.show();
 
 >イベントリスナーで accept ボタンと cancel ボタンを設定したり、そのテキストを変更したりできます。
 >```java
-> // accept のクリックリスナーを設定
+> // accept ボタンのクリックリスナーを設定
 >dialog.setOnAcceptButtonClickListener(View.OnClickListener onAcceptButtonClickListener);
-> // cancel のクリックリスナーを設定
+> // cancel ボタンのクリックリスナーを設定
 >dialog.setOnCancelButtonClickListener(View.OnClickListener onCancelButtonClickListener);
 > // accept ボタンへのアクセス
 >ButtonFlat acceptButton = dialog.getButtonAccept();
