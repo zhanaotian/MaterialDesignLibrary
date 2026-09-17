@@ -1,11 +1,5 @@
 ![Material design library logo](images/logo.png)
 
-<!-- github-global:langs:start -->
-## Translations
-[简体中文](./translations/zh-CN/README.md) | [繁體中文](./translations/zh-TW/README.md) | [日本語](./translations/ja/README.md)
-<!-- github-global:langs:end -->
-
-
 # Material Design Android Library
 
 <a href="https://play.google.com/store/apps/details?id=com.gc.demomaterialdesign">
@@ -15,33 +9,33 @@
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Material%20Design%20Android%20Library-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1156)
 
-* [How to use](#howtouse)
-* [Components](#components)
-    * [Buttons](#buttons)
-        * [Flat Button](#flat-button)
-        * [Rectangle Button](#rectangle-button)
-        * [Float Button](#float-button)
-        * [Float small button](#float-small-button)
-    * [Switches](#switches)
+* [使い方](#howtouse)
+* [コンポーネント](#components)
+    * [ボタン](#buttons)
+        * [フラットボタン](#flat-button)
+        * [レクタングルボタン](#rectangle-button)
+        * [フロートボタン](#float-button)
+        * [スモールフロートボタン](#float-small-button)
+    * [スイッチ](#switches)
         * [CheckBox](#checkbox)
         * [Switch](#switch)
-    * [Progress indicators](#progress-indicators)
-        * [Progress bar circular indeterminate](#progress-bar-circula-rindeterminate)
-        * [Progress bar indeterminate](#progress-bar-indeterminate)
-        * [Progress bar indeterminate determinate](#progress-bar-indeterminate-determinate)
-        * [Progress bar determinate](#progress-bar-determinate)
-        * [Slider](#slider)
-        * [Slider with number indicator](#slider-with-number-indicator)
-* [Widgets](#widgets)
+    * [プログレスインジケーター](#progress-indicators)
+        * [プログレスバー（サーキュラー・不確定）](#progress-bar-circula-rindeterminate)
+        * [プログレスバー（不確定）](#progress-bar-indeterminate)
+        * [プログレスバー（不確定・確定）](#progress-bar-indeterminate-determinate)
+        * [プログレスバー（確定）](#progress-bar-determinate)
+        * [スライダー](#slider)
+        * [数値インジケーター付きスライダー](#slider-with-number-indicator)
+* [ウィジェット](#widgets)
     * [SnackBar](#snackbar)
     * [Dialog](#dialog)
-    * [Color selector](#color-selector)
+    * [カラーセレクター](#color-selector)
 
-## How to use
+## 使い方
 
-If you want use this library, you only have to download MaterialDesign project, import it into your workspace and add the project as a library in your android project settings.
+このライブラリを使用するには、MaterialDesign プロジェクトをダウンロードし、ワークスペースにインポートして、Android プロジェクトの設定でライブラリとして追加するだけです。
 
-If you prefer it, you can use the gradle dependency, you have to add these lines in your build.gradle file:
+お好みであれば、gradle の依存関係を使用することもできます。build.gradle ファイルに以下の行を追加してください:
 
 ```xml
 repositories {
@@ -53,7 +47,7 @@ dependencies {
 }
 ```
 
-Some components have custom attributes, if you want use them, you must add this line in your xml file in the first component:
+一部のコンポーネントにはカスタム属性があります。これらを使用する場合は、xml ファイルの最初のコンポーネントに次の行を追加する必要があります:
 
 ```xml
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -64,8 +58,8 @@ Some components have custom attributes, if you want use them, you must add this 
 </RelativeLayout>
 ```
 
->If you are going to use a ScrollView, it is recommended that you use the CustomScrollView provided in this library to avoid problems with the custom components.
->To use this component:
+>ScrollView を使用する場合、カスタムコンポーネントでの問題を避けるために、このライブラリで提供されている CustomScrollView を使用することをお勧めします。
+>このコンポーネントを使用するには:
 >```xml
 ><com.gc.materialdesign.views.ScrollView 
 >    xmlns:android="http://schemas.android.com/apk/res/android"
@@ -76,11 +70,11 @@ Some components have custom attributes, if you want use them, you must add this 
 ></com.gc.materialdesign.views.ScrollView>
 >```
 
-##Components
+##コンポーネント
 
-####Buttons
+####ボタン
 
-######Flat Button
+######フラットボタン
 
 ![flat button](images/flat_button.png)
 ```xml
@@ -92,7 +86,7 @@ Some components have custom attributes, if you want use them, you must add this 
                 android:text="Button" />
 ```
 
-######Rectangle Button
+######レクタングルボタン
 
 ![rectangle button](images/rectangle_button.png)
 ```xml
@@ -104,13 +98,13 @@ Some components have custom attributes, if you want use them, you must add this 
                 android:text="Button" />
 ```
 
-######Float Button
+######フロートボタン
 
 ![float button](images/float_button.png)
 
->It is recommended to put this component in the right-bottom of the screen. To use this component write this code in your xml file.
->If you don`t want to start this component with animation set the animate attribute to false.
->Put your icon in the icon attribute to set the drawable icon for this component.
+>このコンポーネントは画面の右下に配置することをお勧めします。このコンポーネントを使用するには、xml ファイルに次のコードを記述してください。
+>このコンポーネントをアニメーションなしで開始したくない場合は、animate 属性を false に設定してください。
+>このコンポーネントの drawable アイコンを設定するには、icon 属性にアイコンを指定してください。
 
 ```xml
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -132,7 +126,7 @@ Some components have custom attributes, if you want use them, you must add this 
 </RelativeLayout>
 ```
 
-######Float small button
+######スモールフロートボタン
 
 ![float small button](images/float_small_button.png)
 
@@ -145,7 +139,7 @@ Some components have custom attributes, if you want use them, you must add this 
                 materialdesign:iconDrawable="@drawable/ic_action_new" />
 ```
 
-####Switches
+####スイッチ
 
 ######CheckBox
 ![checkbox](images/checkbox.png)
@@ -171,9 +165,9 @@ Some components have custom attributes, if you want use them, you must add this 
                 materialdesign:check="true" />
 ```
 
-####Progress indicators
+####プログレスインジケーター
 
-######Progress bar circular indeterminate
+######プログレスバー（サーキュラー・不確定）
 ![progress bar circular indeterminate](images/progress_bar_circular_indeterminate.png)
 
 ```xml
@@ -184,7 +178,7 @@ Some components have custom attributes, if you want use them, you must add this 
                 android:background="#1E88E5" />
 ```
 
-######Progress bar indeterminate
+######プログレスバー（不確定）
 ![progress bar indeterminate](images/progress_bar_indeterminate.png)
 
 ```xml
@@ -195,7 +189,7 @@ Some components have custom attributes, if you want use them, you must add this 
                 android:background="#1E88E5" />
 ```
 
-######Progress bar indeterminate determinate
+######プログレスバー（不確定・確定）
 ![Progress bar indeterminate determinate](images/progress_bar_indeterminate_determinate.png)
 
 
@@ -207,13 +201,13 @@ Some components have custom attributes, if you want use them, you must add this 
                 android:background="#1E88E5" />
 ```
 
->If you begin progrees, you only have to set progress it
+>プログレスを開始するには、progress を設定するだけです。
 >
 >```java
 >progressBarIndeterminateDeterminate.setProgress(progress);
 >```
 
-######Progress bar determinate
+######プログレスバー（確定）
 ![Progress bar determinate](images/progress_bar_determinate.png)
 
 
@@ -225,9 +219,9 @@ Some components have custom attributes, if you want use them, you must add this 
                 android:background="#1E88E5" />
 ```
 
->You can custom max and min progress values with `materialdesign:max="50"` and `materialdesign:min="25"` attributes.
+>`materialdesign:max="50"` および `materialdesign:min="25"` 属性を使用して、プログレスの最大値と最小値をカスタマイズできます。
 
-######Slider
+######スライダー
 ![Slider](images/slider.png)
 
 
@@ -242,7 +236,7 @@ Some components have custom attributes, if you want use them, you must add this 
                  />
 ```
 
-######Slider with number indicator
+######数値インジケーター付きスライダー
 ![Slider with number indicator](images/slider_with_number_indicator.png)
 
 
@@ -257,7 +251,7 @@ Some components have custom attributes, if you want use them, you must add this 
                 materialdesign:showNumberIndicator="true"/>
 ```
 
-##Widgets
+##ウィジェット
 
 ####SnackBar
 
@@ -269,7 +263,7 @@ SnackBar snackbar = new SnackBar(Activity activity, String text, String buttonTe
 snackbar.show();
 ```
 
-> If you don't want to show the button, put `null` in `buttonText` attribute
+> ボタンを表示したくない場合は、`buttonText` 属性に `null` を指定してください。
 
 ####Dialog
 
@@ -280,19 +274,19 @@ Dialog dialog = new Dialog(Context context,String title, String message);
 dialog.show();
 ```
 
->You can set the accept and cancel button on the event listener or change it's text
+>イベントリスナーで accept ボタンと cancel ボタンを設定したり、テキストを変更したりできます。
 >```java
-> // Set accept click listenner
+> // accept ボタンのクリックリスナーを設定
 >dialog.setOnAcceptButtonClickListener(View.OnClickListener onAcceptButtonClickListener);
-> // Set cancel click listenner
+> // cancel ボタンのクリックリスナーを設定
 >dialog.setOnCancelButtonClickListener(View.OnClickListener onCancelButtonClickListener);
-> // Acces to accept button
+> // accept ボタンへのアクセス
 >ButtonFlat acceptButton = dialog.getButtonAccept();
-> // Acces to cancel button
+> // cancel ボタンへのアクセス
 >ButtonFlat cancelButton = dialog.getButtonCancel();
 >```
 
-####Color selector
+####カラーセレクター
 
 ![Color selector](images/color_selector.png)
 
@@ -300,8 +294,3 @@ dialog.show();
 ColorSelector colorSelector = new ColorSelector(Context context,int intialColor, OnColorSelectedListener onColorSelectedListener);
 colorSelector.show();
 ```
-
-
-
-
-

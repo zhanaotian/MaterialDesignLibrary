@@ -1,11 +1,5 @@
 ![Material design library logo](images/logo.png)
 
-<!-- github-global:langs:start -->
-## Translations
-[简体中文](./translations/zh-CN/README.md) | [繁體中文](./translations/zh-TW/README.md) | [日本語](./translations/ja/README.md)
-<!-- github-global:langs:end -->
-
-
 # Material Design Android Library
 
 <a href="https://play.google.com/store/apps/details?id=com.gc.demomaterialdesign">
@@ -15,33 +9,33 @@
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Material%20Design%20Android%20Library-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1156)
 
-* [How to use](#howtouse)
-* [Components](#components)
-    * [Buttons](#buttons)
+* [如何使用](#howtouse)
+* [元件](#components)
+    * [按鈕](#buttons)
         * [Flat Button](#flat-button)
         * [Rectangle Button](#rectangle-button)
         * [Float Button](#float-button)
-        * [Float small button](#float-small-button)
-    * [Switches](#switches)
+        * [Float 小按鈕](#float-small-button)
+    * [開關](#switches)
         * [CheckBox](#checkbox)
         * [Switch](#switch)
-    * [Progress indicators](#progress-indicators)
-        * [Progress bar circular indeterminate](#progress-bar-circula-rindeterminate)
-        * [Progress bar indeterminate](#progress-bar-indeterminate)
-        * [Progress bar indeterminate determinate](#progress-bar-indeterminate-determinate)
-        * [Progress bar determinate](#progress-bar-determinate)
-        * [Slider](#slider)
-        * [Slider with number indicator](#slider-with-number-indicator)
-* [Widgets](#widgets)
+    * [進度指示器](#progress-indicators)
+        * [圓形不確定進度條](#progress-bar-circula-rindeterminate)
+        * [不確定進度條](#progress-bar-indeterminate)
+        * [不確定／確定進度條](#progress-bar-indeterminate-determinate)
+        * [確定進度條](#progress-bar-determinate)
+        * [滑桿](#slider)
+        * [帶數字指示器的滑桿](#slider-with-number-indicator)
+* [小工具](#widgets)
     * [SnackBar](#snackbar)
     * [Dialog](#dialog)
-    * [Color selector](#color-selector)
+    * [顏色選擇器](#color-selector)
 
-## How to use
+## 如何使用
 
-If you want use this library, you only have to download MaterialDesign project, import it into your workspace and add the project as a library in your android project settings.
+如果你想使用這個函式庫，只需要下載 MaterialDesign 專案，將它匯入你的工作區，並在你的 Android 專案設定中將該專案加入為函式庫。
 
-If you prefer it, you can use the gradle dependency, you have to add these lines in your build.gradle file:
+如果你偏好的話，也可以使用 gradle 相依性，只要在你的 build.gradle 檔案中加入以下幾行：
 
 ```xml
 repositories {
@@ -53,7 +47,7 @@ dependencies {
 }
 ```
 
-Some components have custom attributes, if you want use them, you must add this line in your xml file in the first component:
+有些元件具有自訂屬性，如果你想使用它們，必須在你的 xml 檔案的第一個元件中加入這一行：
 
 ```xml
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -64,8 +58,8 @@ Some components have custom attributes, if you want use them, you must add this 
 </RelativeLayout>
 ```
 
->If you are going to use a ScrollView, it is recommended that you use the CustomScrollView provided in this library to avoid problems with the custom components.
->To use this component:
+>如果你要使用 ScrollView，建議使用這個函式庫提供的 CustomScrollView，以避免自訂元件產生問題。
+>使用這個元件的方式：
 >```xml
 ><com.gc.materialdesign.views.ScrollView 
 >    xmlns:android="http://schemas.android.com/apk/res/android"
@@ -76,9 +70,9 @@ Some components have custom attributes, if you want use them, you must add this 
 ></com.gc.materialdesign.views.ScrollView>
 >```
 
-##Components
+##元件
 
-####Buttons
+####按鈕
 
 ######Flat Button
 
@@ -108,9 +102,9 @@ Some components have custom attributes, if you want use them, you must add this 
 
 ![float button](images/float_button.png)
 
->It is recommended to put this component in the right-bottom of the screen. To use this component write this code in your xml file.
->If you don`t want to start this component with animation set the animate attribute to false.
->Put your icon in the icon attribute to set the drawable icon for this component.
+>建議將這個元件放在螢幕右下角。要使用這個元件，請在你的 xml 檔案中撰寫以下程式碼。
+>如果你不想讓這個元件以動畫方式啟動，請將 animate 屬性設為 false。
+>將你的圖示放在 icon 屬性中，即可設定這個元件的 drawable 圖示。
 
 ```xml
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -132,7 +126,7 @@ Some components have custom attributes, if you want use them, you must add this 
 </RelativeLayout>
 ```
 
-######Float small button
+######Float 小按鈕
 
 ![float small button](images/float_small_button.png)
 
@@ -145,7 +139,7 @@ Some components have custom attributes, if you want use them, you must add this 
                 materialdesign:iconDrawable="@drawable/ic_action_new" />
 ```
 
-####Switches
+####開關
 
 ######CheckBox
 ![checkbox](images/checkbox.png)
@@ -171,9 +165,9 @@ Some components have custom attributes, if you want use them, you must add this 
                 materialdesign:check="true" />
 ```
 
-####Progress indicators
+####進度指示器
 
-######Progress bar circular indeterminate
+######圓形不確定進度條
 ![progress bar circular indeterminate](images/progress_bar_circular_indeterminate.png)
 
 ```xml
@@ -184,7 +178,7 @@ Some components have custom attributes, if you want use them, you must add this 
                 android:background="#1E88E5" />
 ```
 
-######Progress bar indeterminate
+######不確定進度條
 ![progress bar indeterminate](images/progress_bar_indeterminate.png)
 
 ```xml
@@ -195,7 +189,7 @@ Some components have custom attributes, if you want use them, you must add this 
                 android:background="#1E88E5" />
 ```
 
-######Progress bar indeterminate determinate
+######不確定／確定進度條
 ![Progress bar indeterminate determinate](images/progress_bar_indeterminate_determinate.png)
 
 
@@ -207,13 +201,13 @@ Some components have custom attributes, if you want use them, you must add this 
                 android:background="#1E88E5" />
 ```
 
->If you begin progrees, you only have to set progress it
+>如果你要開始顯示進度，只需要設定進度值即可
 >
 >```java
 >progressBarIndeterminateDeterminate.setProgress(progress);
 >```
 
-######Progress bar determinate
+######確定進度條
 ![Progress bar determinate](images/progress_bar_determinate.png)
 
 
@@ -225,9 +219,9 @@ Some components have custom attributes, if you want use them, you must add this 
                 android:background="#1E88E5" />
 ```
 
->You can custom max and min progress values with `materialdesign:max="50"` and `materialdesign:min="25"` attributes.
+>你可以使用 `materialdesign:max="50"` 和 `materialdesign:min="25"` 屬性自訂進度的最大值與最小值。
 
-######Slider
+######滑桿
 ![Slider](images/slider.png)
 
 
@@ -242,7 +236,7 @@ Some components have custom attributes, if you want use them, you must add this 
                  />
 ```
 
-######Slider with number indicator
+######帶數字指示器的滑桿
 ![Slider with number indicator](images/slider_with_number_indicator.png)
 
 
@@ -257,7 +251,7 @@ Some components have custom attributes, if you want use them, you must add this 
                 materialdesign:showNumberIndicator="true"/>
 ```
 
-##Widgets
+##小工具
 
 ####SnackBar
 
@@ -269,7 +263,7 @@ SnackBar snackbar = new SnackBar(Activity activity, String text, String buttonTe
 snackbar.show();
 ```
 
-> If you don't want to show the button, put `null` in `buttonText` attribute
+> 如果你不想顯示按鈕，請在 `buttonText` 屬性中傳入 `null`
 
 ####Dialog
 
@@ -280,19 +274,19 @@ Dialog dialog = new Dialog(Context context,String title, String message);
 dialog.show();
 ```
 
->You can set the accept and cancel button on the event listener or change it's text
+>你可以在事件監聽器中設定確定與取消按鈕，或更改它們的文字
 >```java
-> // Set accept click listenner
+> // 設定確定按鈕的點擊監聽器
 >dialog.setOnAcceptButtonClickListener(View.OnClickListener onAcceptButtonClickListener);
-> // Set cancel click listenner
+> // 設定取消按鈕的點擊監聽器
 >dialog.setOnCancelButtonClickListener(View.OnClickListener onCancelButtonClickListener);
-> // Acces to accept button
+> // 存取確定按鈕
 >ButtonFlat acceptButton = dialog.getButtonAccept();
-> // Acces to cancel button
+> // 存取取消按鈕
 >ButtonFlat cancelButton = dialog.getButtonCancel();
 >```
 
-####Color selector
+####顏色選擇器
 
 ![Color selector](images/color_selector.png)
 
@@ -300,8 +294,3 @@ dialog.show();
 ColorSelector colorSelector = new ColorSelector(Context context,int intialColor, OnColorSelectedListener onColorSelectedListener);
 colorSelector.show();
 ```
-
-
-
-
-

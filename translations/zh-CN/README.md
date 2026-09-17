@@ -1,11 +1,5 @@
 ![Material design library logo](images/logo.png)
 
-<!-- github-global:langs:start -->
-## Translations
-[简体中文](./translations/zh-CN/README.md) | [繁體中文](./translations/zh-TW/README.md) | [日本語](./translations/ja/README.md)
-<!-- github-global:langs:end -->
-
-
 # Material Design Android Library
 
 <a href="https://play.google.com/store/apps/details?id=com.gc.demomaterialdesign">
@@ -15,33 +9,33 @@
 
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Material%20Design%20Android%20Library-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/1156)
 
-* [How to use](#howtouse)
-* [Components](#components)
-    * [Buttons](#buttons)
-        * [Flat Button](#flat-button)
-        * [Rectangle Button](#rectangle-button)
-        * [Float Button](#float-button)
-        * [Float small button](#float-small-button)
-    * [Switches](#switches)
-        * [CheckBox](#checkbox)
-        * [Switch](#switch)
-    * [Progress indicators](#progress-indicators)
-        * [Progress bar circular indeterminate](#progress-bar-circula-rindeterminate)
-        * [Progress bar indeterminate](#progress-bar-indeterminate)
-        * [Progress bar indeterminate determinate](#progress-bar-indeterminate-determinate)
-        * [Progress bar determinate](#progress-bar-determinate)
-        * [Slider](#slider)
-        * [Slider with number indicator](#slider-with-number-indicator)
-* [Widgets](#widgets)
+* [如何使用](#howtouse)
+* [组件](#components)
+    * [按钮](#buttons)
+        * [扁平按钮（Flat Button）](#flat-button)
+        * [矩形按钮（Rectangle Button）](#rectangle-button)
+        * [浮动按钮（Float Button）](#float-button)
+        * [小型浮动按钮（Float small button）](#float-small-button)
+    * [开关](#switches)
+        * [复选框（CheckBox）](#checkbox)
+        * [开关（Switch）](#switch)
+    * [进度指示器](#progress-indicators)
+        * [圆形不确定进度条](#progress-bar-circula-rindeterminate)
+        * [不确定进度条](#progress-bar-indeterminate)
+        * [不确定/确定进度条](#progress-bar-indeterminate-determinate)
+        * [确定进度条](#progress-bar-determinate)
+        * [滑块（Slider）](#slider)
+        * [带数字指示器的滑块](#slider-with-number-indicator)
+* [小部件](#widgets)
     * [SnackBar](#snackbar)
-    * [Dialog](#dialog)
-    * [Color selector](#color-selector)
+    * [对话框（Dialog）](#dialog)
+    * [颜色选择器（Color selector）](#color-selector)
 
-## How to use
+## 如何使用
 
-If you want use this library, you only have to download MaterialDesign project, import it into your workspace and add the project as a library in your android project settings.
+如果你想使用这个库，只需下载 MaterialDesign 项目，将其导入你的工作区，并在你的 Android 项目设置中把该项目添加为库。
 
-If you prefer it, you can use the gradle dependency, you have to add these lines in your build.gradle file:
+如果你更喜欢这种方式，也可以使用 gradle 依赖，只需在 build.gradle 文件中添加以下几行：
 
 ```xml
 repositories {
@@ -53,7 +47,7 @@ dependencies {
 }
 ```
 
-Some components have custom attributes, if you want use them, you must add this line in your xml file in the first component:
+某些组件具有自定义属性，如果你想使用它们，必须在 xml 文件的第一个组件中添加这一行：
 
 ```xml
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -64,8 +58,8 @@ Some components have custom attributes, if you want use them, you must add this 
 </RelativeLayout>
 ```
 
->If you are going to use a ScrollView, it is recommended that you use the CustomScrollView provided in this library to avoid problems with the custom components.
->To use this component:
+>如果你打算使用 ScrollView，建议使用本库提供的 CustomScrollView，以避免自定义组件出现问题。
+>使用该组件的方法：
 >```xml
 ><com.gc.materialdesign.views.ScrollView 
 >    xmlns:android="http://schemas.android.com/apk/res/android"
@@ -76,11 +70,11 @@ Some components have custom attributes, if you want use them, you must add this 
 ></com.gc.materialdesign.views.ScrollView>
 >```
 
-##Components
+##组件
 
-####Buttons
+####按钮
 
-######Flat Button
+######扁平按钮（Flat Button）
 
 ![flat button](images/flat_button.png)
 ```xml
@@ -92,7 +86,7 @@ Some components have custom attributes, if you want use them, you must add this 
                 android:text="Button" />
 ```
 
-######Rectangle Button
+######矩形按钮（Rectangle Button）
 
 ![rectangle button](images/rectangle_button.png)
 ```xml
@@ -104,13 +98,13 @@ Some components have custom attributes, if you want use them, you must add this 
                 android:text="Button" />
 ```
 
-######Float Button
+######浮动按钮（Float Button）
 
 ![float button](images/float_button.png)
 
->It is recommended to put this component in the right-bottom of the screen. To use this component write this code in your xml file.
->If you don`t want to start this component with animation set the animate attribute to false.
->Put your icon in the icon attribute to set the drawable icon for this component.
+>建议将此组件放置在屏幕右下角。要使用此组件，请在你的 xml 文件中编写以下代码。
+>如果你不想让此组件以动画方式启动，请将 animate 属性设置为 false。
+>将你的图标放在 icon 属性中，即可为该组件设置 drawable 图标。
 
 ```xml
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -132,7 +126,7 @@ Some components have custom attributes, if you want use them, you must add this 
 </RelativeLayout>
 ```
 
-######Float small button
+######小型浮动按钮（Float small button）
 
 ![float small button](images/float_small_button.png)
 
@@ -145,9 +139,9 @@ Some components have custom attributes, if you want use them, you must add this 
                 materialdesign:iconDrawable="@drawable/ic_action_new" />
 ```
 
-####Switches
+####开关
 
-######CheckBox
+######复选框（CheckBox）
 ![checkbox](images/checkbox.png)
 
 ```xml
@@ -159,7 +153,7 @@ Some components have custom attributes, if you want use them, you must add this 
                 materialdesign:check="true" />
 ```
 
-######Switch
+######开关（Switch）
 ![switch](images/switch.png)
 
 ```xml
@@ -171,9 +165,9 @@ Some components have custom attributes, if you want use them, you must add this 
                 materialdesign:check="true" />
 ```
 
-####Progress indicators
+####进度指示器
 
-######Progress bar circular indeterminate
+######圆形不确定进度条
 ![progress bar circular indeterminate](images/progress_bar_circular_indeterminate.png)
 
 ```xml
@@ -184,7 +178,7 @@ Some components have custom attributes, if you want use them, you must add this 
                 android:background="#1E88E5" />
 ```
 
-######Progress bar indeterminate
+######不确定进度条
 ![progress bar indeterminate](images/progress_bar_indeterminate.png)
 
 ```xml
@@ -195,7 +189,7 @@ Some components have custom attributes, if you want use them, you must add this 
                 android:background="#1E88E5" />
 ```
 
-######Progress bar indeterminate determinate
+######不确定/确定进度条
 ![Progress bar indeterminate determinate](images/progress_bar_indeterminate_determinate.png)
 
 
@@ -207,13 +201,13 @@ Some components have custom attributes, if you want use them, you must add this 
                 android:background="#1E88E5" />
 ```
 
->If you begin progrees, you only have to set progress it
+>如果你要开始显示进度，只需设置进度值即可
 >
 >```java
 >progressBarIndeterminateDeterminate.setProgress(progress);
 >```
 
-######Progress bar determinate
+######确定进度条
 ![Progress bar determinate](images/progress_bar_determinate.png)
 
 
@@ -225,9 +219,9 @@ Some components have custom attributes, if you want use them, you must add this 
                 android:background="#1E88E5" />
 ```
 
->You can custom max and min progress values with `materialdesign:max="50"` and `materialdesign:min="25"` attributes.
+>你可以使用 `materialdesign:max="50"` 和 `materialdesign:min="25"` 属性来自定义进度的最大值和最小值。
 
-######Slider
+######滑块（Slider）
 ![Slider](images/slider.png)
 
 
@@ -242,7 +236,7 @@ Some components have custom attributes, if you want use them, you must add this 
                  />
 ```
 
-######Slider with number indicator
+######带数字指示器的滑块
 ![Slider with number indicator](images/slider_with_number_indicator.png)
 
 
@@ -257,7 +251,7 @@ Some components have custom attributes, if you want use them, you must add this 
                 materialdesign:showNumberIndicator="true"/>
 ```
 
-##Widgets
+##小部件
 
 ####SnackBar
 
@@ -269,9 +263,9 @@ SnackBar snackbar = new SnackBar(Activity activity, String text, String buttonTe
 snackbar.show();
 ```
 
-> If you don't want to show the button, put `null` in `buttonText` attribute
+>如果你不想显示按钮，请在 `buttonText` 属性中传入 `null`
 
-####Dialog
+####对话框（Dialog）
 
 ![Dialog](images/dialog.png)
 
@@ -280,19 +274,19 @@ Dialog dialog = new Dialog(Context context,String title, String message);
 dialog.show();
 ```
 
->You can set the accept and cancel button on the event listener or change it's text
+>你可以在事件监听器中设置确认和取消按钮，或者修改它们的文本
 >```java
-> // Set accept click listenner
+> // 设置确认按钮点击监听器
 >dialog.setOnAcceptButtonClickListener(View.OnClickListener onAcceptButtonClickListener);
-> // Set cancel click listenner
+> // 设置取消按钮点击监听器
 >dialog.setOnCancelButtonClickListener(View.OnClickListener onCancelButtonClickListener);
-> // Acces to accept button
+> // 获取确认按钮
 >ButtonFlat acceptButton = dialog.getButtonAccept();
-> // Acces to cancel button
+> // 获取取消按钮
 >ButtonFlat cancelButton = dialog.getButtonCancel();
 >```
 
-####Color selector
+####颜色选择器（Color selector）
 
 ![Color selector](images/color_selector.png)
 
@@ -300,8 +294,3 @@ dialog.show();
 ColorSelector colorSelector = new ColorSelector(Context context,int intialColor, OnColorSelectedListener onColorSelectedListener);
 colorSelector.show();
 ```
-
-
-
-
-
